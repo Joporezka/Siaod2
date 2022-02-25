@@ -4,7 +4,7 @@ using namespace std;
 #include <vector>
 #include "Siaod2.h"
 
-void inpVector(vector<vector<float>> &arr_v) {
+void inpVector(vector<vector<float>> &arr_v) { //заполнение вектора
     vector <float> v_temp;
     cout << "Введите количество уникальных плоскостей: \n";
     int n,choose;
@@ -30,7 +30,7 @@ void inpVector(vector<vector<float>> &arr_v) {
     }
 }
 
-bool checkPar(vector<float>& arr_v1, vector<float>& arr_v2) {
+bool checkPar(vector<float>& arr_v1, vector<float>& arr_v2) { //проверка двух плоскостей на непараллельность(по нормали)
 	for (int i = 0; i < 2; i++) {
 		if (arr_v1[i] / (float)arr_v2[i] != arr_v1[i+1] / (float)arr_v2[i+1]) {
 			return(false);
@@ -39,7 +39,7 @@ bool checkPar(vector<float>& arr_v1, vector<float>& arr_v2) {
 	return(true);
 }
 
-void equation_plane(vector<float>& arr_temp, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3) {
+void equation_plane(vector<float>& arr_temp, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3) { //получение координат вектора нормали по 3 точкам
 
     float a1 = x2 - x1;
     float b1 = y2 - y1;
@@ -55,7 +55,7 @@ void equation_plane(vector<float>& arr_temp, float x1, float y1, float z1, float
 }
 
 
-int third_v(vector<vector<float> > &arr_v) {
+int third_v(vector<vector<float> > &arr_v) { //функция, выдающая ответ на задание 3
     int cnt = 0;
 	for (int i = 0; i < arr_v.size();i++) {
 		for (int j = 0; i < arr_v.size(); i++) {

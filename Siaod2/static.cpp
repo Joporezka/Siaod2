@@ -3,11 +3,13 @@ using namespace std;
 #include <iostream>
 #include <cmath>
 
-int rrand(int range_min, int range_max) {
+//динамический массив передается в функции для статического массива
+
+int rrand(int range_min, int range_max) { //случайная генерация int в заданном диапазоне
 	return rand() % (range_max - range_min + 1) + range_min;
 }
 
-void fillArr(int arr[],int rows, int cols) {
+void fillArr(int arr[],int rows, int cols) {//заполнение массива
 	cout << "Type 0 for manual fill, 1 for random\n";
 	int inp;
 	cin >> inp;
@@ -27,7 +29,7 @@ void fillArr(int arr[],int rows, int cols) {
 	}
 }
 
-void printArr(int arr[], int rows, int cols) {
+void printArr(int arr[], int rows, int cols) {//вывод массива на экран
 	cout << "Your array:\n";
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
@@ -37,7 +39,7 @@ void printArr(int arr[], int rows, int cols) {
 	}
 }
 
-int first_static(int arr[], int rows, int cols) {
+int first_static(int arr[], int rows, int cols) {//функция, выдающая ответ на 1 пункт задачи
 	int sum_total = 0, sum_temp = 0;
 	for (int j = 0; j < cols; j++) {
 		sum_temp = 0;
@@ -56,7 +58,7 @@ int first_static(int arr[], int rows, int cols) {
 	return(sum_total);
 }
 
-int second_static(int arr[], int rows, int cols) {
+int second_static(int arr[], int rows, int cols) {//функция, выдающая ответ на 2 пункт задачи
 	int min=arr[0];
 	for (int i = 0; i < rows - 1; i++)
 	{
