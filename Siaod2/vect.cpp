@@ -1,14 +1,36 @@
-#pragma once
 using namespace std;
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include "Siaod2.h"
 
-void inpVector(vector<vector<float> > &arr_v) {
-    
+void inpVector(vector<vector<float>> &arr_v) {
+    vector <float> v_temp;
+    cout << "¬ведите количество уникальных плоскостей: \n";
+    int n,choose;
+    float temp;
+    cin >> n;
+    cout << "¬ведите 0 дл€ ручного заполнение€, 1 дл€ автоматического:\n";
+    cin >> choose;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 9; j++) {
+            if (choose == 0) {
+                cin >> temp;
+            }
+            else {
+                temp = rrand(-20,20);
+                cout << temp << " ";
+            }
+            
+            v_temp.push_back(temp);
+            
+        }
+        cout << endl;
+        arr_v.push_back(v_temp);
+    }
 }
 
-bool checkPar(vector<float> &arr_v1, vector<float> &arr_v2) {
+bool checkPar(vector<float>& arr_v1, vector<float>& arr_v2) {
 	for (int i = 0; i < 2; i++) {
 		if (arr_v1[i] / (float)arr_v2[i] != arr_v1[i+1] / (float)arr_v2[i+1]) {
 			return(false);
@@ -28,7 +50,7 @@ void equation_plane(vector<float>& arr_temp, float x1, float y1, float z1, float
     arr_temp.push_back( b1 * c2 - b2 * c1);
     arr_temp.push_back(a2 * c1 - a1 * c2);
     arr_temp.push_back(a1 * b2 - b1 * a2);
-    arr_temp.push_back((-arr_temp[0] * x1 - arr_temp[1] * y1 - arr_temp[2] * z1));
+    //arr_temp.push_back((-arr_temp[0] * x1 - arr_temp[1] * y1 - arr_temp[2] * z1));
 
 }
 

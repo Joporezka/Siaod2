@@ -14,9 +14,9 @@ int second_static(int arr[], int rows, int cols);
 //same as static
 
 //vect
-void inpVector(vector<vector<float>> &arr_v);
-bool checkPar(vector<float> &arr_v1, vector<float> &arr_v2);
-void equation_plane(vector<float> &arr_temp, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3);
-int third_v(vector<vector<float> > &arr_v);
+void inpVector(std::vector<std::vector<float>>& arr_v);
+bool checkPar(std::vector<float>& arr_v1, std::vector<float>& arr_v2);
+void equation_plane(std::vector<float> &arr_temp, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3);
+int third_v(std::vector<std::vector<float> > &arr_v);
 
 #endif

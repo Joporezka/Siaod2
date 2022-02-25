@@ -11,6 +11,9 @@ using namespace std;
 
 int main()
 {   
+    setlocale(LC_ALL, "RUS");
+    srand(time(NULL));
+
     int arr[ROWS][COLS];
     fillArr(reinterpret_cast<int*>(arr), ROWS, COLS);
     printArr(reinterpret_cast<int*>(arr), ROWS, COLS);
@@ -26,10 +29,11 @@ int main()
     cout << second_static(reinterpret_cast<int*>(arr_d), ROWS, COLS) << endl;
 
 
-    //vector<vector<float> > arr_v;
-    vector <vector<float>> arr_v(3, vector<float>(6, 0));
-    inpVector(arr_v);
-    //cout << third_v(arr_v);
+   vector< vector<float> > arr_v;
+   inpVector(arr_v);
+   cout <<"Answer: "<< third_v(arr_v);
+
+    
 
 
 
