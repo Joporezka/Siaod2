@@ -32,7 +32,7 @@ void inpVector(vector<vector<float>> &arr_v) { //заполнение вектора
 
 bool checkPar(vector<float>& arr_v1, vector<float>& arr_v2) { //проверка двух плоскостей на непараллельность(по нормали)
 	for (int i = 0; i < 2; i++) {
-		if (!(arr_v1[i] / (float)arr_v2[i] == arr_v1[i+1] / (float)arr_v2[i+1] && arr_v1[i] / (float)arr_v2[i] == arr_v1[i+2] / (float)arr_v2[i+2])) {
+		if (!(arr_v1[i] / (float)arr_v2[i] == arr_v1[i+1] / (float)arr_v2[i+1])){
 			return(false);
 		}
 	}
