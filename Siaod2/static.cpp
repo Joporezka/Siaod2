@@ -59,7 +59,7 @@ int first_static(int arr[], int rows, int cols) {//функция, выдающая ответ на 1 
 }
 
 int second_static(int arr[], int rows, int cols) {//функция, выдающая ответ на 2 пункт задачи
-	int min=arr[0];
+	int min=100000;
 	for (int i = 0; i < rows - 1; i++)
 	{
 		int sum = 0;
